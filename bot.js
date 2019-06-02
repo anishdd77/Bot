@@ -1632,5 +1632,22 @@ client.on('message', message => {
 
      
 }); 
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes(' ختك امك')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "By TitanMc"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
  
 client.login(process.env.BOT_TOKEN)
