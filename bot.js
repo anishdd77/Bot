@@ -3448,6 +3448,8 @@ room.send(tests);
 })
 }
 });
+
+
 client.on('message', message => {
 if(message.content.includes("<@435392018693488641>")) {
 message.channel.startTyping()
@@ -3505,4 +3507,5 @@ client.on('guildMemberAdd', member => {
 return channel.send("")
     }
     )});
+	
 client.login(process.env.BOT_TOKEN)
