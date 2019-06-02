@@ -1388,5 +1388,16 @@ if(!message.channel.guild) return message.channel.send('**هذا الأمر فق
 
 
 });
+client.on('guildMemberAdd', member => {
+    var embed = new Discord.RichEmbed()
+    .setThumbnail(member.user.avatarURL)
+  .addField("*** شكرا الانضمامك الـنـا حبيبي ***" ,member.user.username )
+    .setDescription('**# ``-`` __W__elcome __T__ø server [Anis_HDD ]🥂**')// كلام ترحيب بعضو
+    .setColor('RANDOM')
+    .setImage('https://2.top4top.net/p_1225y7yza1.gif')// صور ترحيب
+var channel =member.guild.channels.find('name', '✨щéļḉσᶆé✨')// اسم شات ترحيب
+if (!channel) return;
+channel.send({embed : embed});
+});
  
 client.login(process.env.BOT_TOKEN)
