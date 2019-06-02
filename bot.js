@@ -916,59 +916,6 @@ client.on("message", message => {
  message.delete(); 
 };     
 });
-	client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('gmail')){
-        message.delete()
-    return message.reply(`** لايمكنك نشر الجيمل  هنا **`)
-    }
-});
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('snapchat')){
-        message.delete()
-    return message.reply(`** لايمكنك نشر سناب شات  هنا **`)
-    }
-});
-
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('instagram')){
-        message.delete()
-    return message.reply(`** لايمكنك نشر الانستقرام هنا **`)
-    }
-});
-
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('twitter')){
-        message.delete()
-    return message.reply(`** لايمكنك  نشر التويتر هنا **`)
-    }
-});
-
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('facebook')){
-        message.delete()
-    return message.reply(`** لايمكنك نشر الفيس بوك هنا **`)
-    }
-});
-
-
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('youtube')){
-        message.delete()
-    return message.reply(`** لايمكنك نشر اروابط في هذا السرفر **`)
-    }
-
-});
 
 client.on('message' , message => {
 
@@ -1651,5 +1598,58 @@ client.on('message', message => {
      
 }); 
 
- 
+	client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('gmail')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الجيمل  هنا **`)
+    }
+});
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('snapchat')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر سناب شات  هنا **`)
+    }
+});
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('instagram')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الانستقرام هنا **`)
+    }
+});
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('twitter')){
+        message.delete()
+    return message.reply(`** لايمكنك  نشر التويتر هنا **`)
+    }
+});
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('facebook')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الفيس بوك هنا **`)
+    }
+});
+
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('youtube')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر اروابط في هذا السرفر **`)
+    }
+
+});
+
 client.login(process.env.BOT_TOKEN)
