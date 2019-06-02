@@ -901,6 +901,7 @@ const Sra7a = [
 });
 
 client.on('message', msg => { if (msg.content === 'هلا') { msg.reply('**هــلا والله  **'); } });
+client.on('message', msg => { if (msg.content === 'خروف') { msg.reply('**:sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: :sheep: الله يهديك يا خروووف-- https://murtahil.com/wp-content/uploads/2019/03/%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A7%D8%B7%D9%81%D8%A7%D9%84-%D8%B9%D9%86-%D8%A7%D9%84%D8%AE%D8%B1%D9%88%D9%81-2-1170x610.jpg**'); } });
 
 client.on("message", message => {
 
@@ -1649,5 +1650,6 @@ client.on('message', message => {
 
      
 }); 
+
  
 client.login(process.env.BOT_TOKEN)
