@@ -1,4 +1,4 @@
-=var Discord = require('discord.js');
+var Discord = require('discord.js');
 var fs = require('fs');
 var client = new Discord.Client();
 
@@ -1581,44 +1581,75 @@ client.on('message', message => {
      
 }); 
 
-client.on('message', async message => {
-            if(message.content.includes('discord.gg')){ 
-                if(message.member.hasPermission("MANAGE_GUILD")) return;
-        if(!message.channel.guild) return;
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes(' ختك امك')){
         message.delete()
-          var command = message.content.split(" ")[0];
-    let muterole = message.guild.roles.find(`name`, "muted");
-    if(!muterole){
-      try{
-        muterole = await message.guild.createRole({
-          name: "muted",
-          color: "#000000",
-          permissions:[]
-        })
-        message.guild.channels.forEach(async (channel, id) => {
-          await channel.overwritePermissions(muterole, {
-            SEND_MESSAGES: false,
-            ADD_REACTIONS: false
-          });
-        });
-      }catch(e){
-        console.log(e.stack);
-      }
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          text: "By TitanMc"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
+
+	client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('gmail')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الجيمل  هنا **`)
     }
-           if(!message.channel.guild) return message.reply('** This command only for servers**');
-     message.member.addRole(muterole);
-    const embed500 = new Discord.RichEmbed()
-      .setTitle("Muted Ads")
-            .addField(`**  You Have Been Muted **` , `**Reason : Sharing Another Discord Link**`)
-            .setColor("c91616")
-            .setThumbnail(`${message.author.avatarURL}`)
-            .setAuthor(message.author.username, message.author.avatarURL)
-        .setFooter(`${message.guild.name} `)
-     message.channel.send(embed500)
-     message.author.send('` انت معاقب ميوت شاتي بسبب نشر سرفرات ان كان عن طريق الخطا من فضلك تكلم مع الادارة `');
-   
-       
+});
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('snapchat')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر سناب شات  هنا **`)
     }
-})
+});
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('instagram')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الانستقرام هنا **`)
+    }
+});
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('twitter')){
+        message.delete()
+    return message.reply(`** لايمكنك  نشر التويتر هنا **`)
+    }
+});
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('facebook')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الفيس بوك هنا **`)
+    }
+});
+
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('youtube')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر اروابط في هذا السرفر **`)
+    }
+
+});
 
 client.login(process.env.BOT_TOKEN)
