@@ -1340,7 +1340,7 @@ client.on('guildMemberAdd', member => {
     var embed = new Discord.RichEmbed()
     .setThumbnail(member.user.avatarURL)
   .addField("*** شكرا الانضمامك الـنـا حبيبي ***" ,member.user.username )
-    .setDescription('**# ``-`` __W__elcome __T__ø server [TitanMc]🥂**')// كلام ترحيب بعضو
+    .setDescription('**# ``-`` __W__elcome __T__ø server 🥂**')// كلام ترحيب بعضو
     .setColor('RANDOM')
     .setImage('https://2.top4top.net/p_1225y7yza1.gif')// صور ترحيب
 var channel =member.guild.channels.find('name', '✨щéļḉσᶆé✨')// اسم شات ترحيب
@@ -1402,7 +1402,7 @@ client.on('message', message => {
   
   }).then(messages => message.channel.bulkDelete(messages));
   message.channel.sendMessage("", {embed: {
-    title: "``✏️✅ تــم مسح الشات ``",
+    title: "``✏️✅ تــم مسح  بنجاح ``",
     color: 0x06DF00,
     footer: {
     
@@ -1411,21 +1411,7 @@ client.on('message', message => {
   };
   
   });
-  client.on('message', message => {
-            if (message.content === 'خروف') {
-              message.channel.sendFile("https://murtahil.com/wp-content/uploads/2019/03/%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A7%D8%B7%D9%81%D8%A7%D9%84-%D8%B9%D9%86-%D8%A7%D9%84%D8%AE%D8%B1%D9%88%D9%81-2-1170x610.jpg");
-            }
-         });
-		 client.on('message', message => {
-            if (message.content === 'خروف') {
-              message.channel.sendFile("https://i.ytimg.com/vi/aTwUIYcY85o/hqdefault.jpg");
-            }
-         });
-		 client.on('message', message => {
-            if (message.content === 'خروف') {
-              message.channel.sendFile("https://i.alarab.co.uk/styles/article_image_800x450_scale/s3/empictures/slide/_61005_mout3.jpg");
-            }
-         });
+
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
     if(message.content.includes('كلب')){
@@ -1642,5 +1628,26 @@ client.on('message', message => {
 
      
 });		 
+
+client.on('message', message => {
+  let command = message.content.split(" ")[0].slice(prefix.length);
+  let args = message.content.split(" ").slice(1);
+
+  if(!message.content.toLowerCase().startsWith(prefix)) return;
+  if(command == "اقتراح") {
+    if(!args.join(" ")) return message.channel.send(`**يرجي كتابة الاقتراح **`);
+    let channel = message.guild.channels.find(c => c.name == "اقتراحات");
+    let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username, message.author.displayAvatarURL)
+    .setTitle(``)
+    .setFooter(`Select a reaction below to vote on suggestion`)
+    .setDescription(args.join(" "));
+    channel.send(embed).then(msg => {
+      msg.react("✅").then(() => msg.react("❌"));
+      message.delete()
+      message.channel.send(`**يرجي كتابة اقتراح لكي يتم ارساله الي روم الاقتراحات ❎ **`);
+    });
+  }
+});
 
 client.login(process.env.BOT_TOKEN)
