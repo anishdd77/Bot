@@ -74,74 +74,108 @@ client.on('ready', function(){
     }, ms);100000
 
 });
-client.on("message", message => {
-    if (message.content === (prefix + "help")) {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`**
-		 ━━━┳╮╱╱╱╱╱╱╱ ╭━━╮╱╱╱╱╭╮
-         ┃╭━╮┃┃╱╱╱╱╱╱╱ ┃╭╮┃╱╱╱╭╯╰╮
-         ┃╰━╯┃┃╭╮╭┳━━╮ ┃╰╯╰┳━━╋╮╭╯
-         ┃╭━━┫┃┃┃┃┃━━┫ ┃╭━╮┃╭╮┃┃┃
-         ┃┃╱╱┃╰┫╰╯┣━━┃ ┃╰━╯┃╰╯┃┃╰╮
-╰        ╯╱╱╰━┻━━┻━━╯ ╰━━━┻━━╯╰━╯
-        
-		 ------------------------------
-		 -🚀 سرعه اتصال ممتازه
-         -😎 سهل الاستخدام 
-         -⚠ صيانه كل يوم
-         -💵 مجاني بل كامل 
-         -📚 البوت عربي و سيتم اضافه اللغه النكليزية
-		     ¤ [Aռɨֆ_ʍǟʟʊʍʏǟτ|ɢǟʍϵrツ  #0976البوت خاص ب] ¤
-         ------------------------------
-		      💎『اوامر عامة』💎
-         -id : 『عرض ملفك الشخصي』
-         -ask : 『البوت يسئلك اسئلة』
-         -server : 『معلومات عن السيرفر』
-		 -ping 『لمعرفه سرعه البوت』
-		 -servers 『علشان تشوف البوت بكم سيرفر اون لاين 』
-		 -bot/ معلومات عن البوت』
-		 -avatar/ يعرض صورتك او صوره شخص』
-		 -support/ سيرفر الدعم القني و المساعده』
-		 -roll <number> ➾ role
-		 -draw / يكرر الكلام في صوره』
-		 -calculate / حاسبة』
-		 -say/يكرر الكلام الي تكتبو
-		 -skin name in minecraft لإضهار سكنك في ماين طرافت
-		 ${prefix}speed / اسرع كتابة
-         ------------------------------
-		    👑『اوامر ادارية』👑
-         -ban : 『لتعطي شخص باند』
-         -kick : 『لتعطي شخص كيك』
-         -clear : 『لمسح الشات برقم』
-         -createroles : 『عمل رتب متكاملة للسيرفر』
-         -voicesetup : 『انشاء روم فويس اونلاين
-         لكتابة الكلام الذي في الروم اكتب voicesetup الكلام و 0 』
-		 -color 50 /انشاء 50 لون』
-		 -mute < mention > ➾ اسكات عضو
-		 -unmute <mention> ➾ فك الاسكات من العضو
-		 -bc  『خيارات البرودكاست』
-		 -ce لمح لشات بعدد
-		 -role @user <rank> / لأعطاء رتبة لعضو معين
-		 -roleremove @user <rank> / لازالة الرتبة من شخص معين
-          ----------------------
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
+    let pages = [`
+***__وصف عن البوت__***
+**
+ -🚀 سرعه اتصال ممتازه
+-😎 سهل الاستخدام 
+-⚠ صيانه كل يوم
+-💵 مجاني بل كامل 
+-📚 البوت عربي و سيتم اضافه اللغه النكليزية
+¤ [TitanMc] ¤
+**
+        ***__General orders__***
+**
+-id : 『عرض ملفك الشخصي』
+-ask : 『البوت يسئلك اسئلة』
+-server : 『معلومات عن السيرفر』
+-ping 『لمعرفه سرعه البوت』
+-servers 『علشان تشوف البوت بكم سيرفر اون لاين 』
+-bot/ معلومات عن البوت』
+-avatar/ يعرض صورتك او صوره شخص』
+-support/ سيرفر الدعم القني و المساعده』
+-roll <number> ➾ role
+-draw / يكرر الكلام في صوره』
+-calculate / حاسبة』
+-say/يكرر الكلام الي تكتبو
+-skin name in minecraft لإضهار سكنك في ماين طرافت
+**
+  `
+,`
+        ***__Admin orders__***
+**
+-ban : 『لتعطي شخص باند』
+-kick : 『لتعطي شخص كيك』
+-clear : 『لمسح الشات برقم』
+-createroles : 『عمل رتب متكاملة للسيرفر』
+-voicesetup : 『انشاء روم فويس اونلاين
+لكتابة الكلام الذي في الروم اكتب voicesetup الكلام و 0 』
+-color 50 /انشاء 50 لون』
+-mute < mention > ➾ اسكات عضو
+-unmute <mention> ➾ فك الاسكات من العضو
+-bc  『خيارات البرودكاست』
+-ce لمح لشات بعدد
+-role @user <rank> / لأعطاء رتبة لعضو معين
+-roleremove @user <rank> / لازالة الرتبة من شخص معين
+----------------------
          -guilds : عدد سيرفر البوت
          -inv : دعوه البوت الى سيرفر (غير ماتحة)
          -help : عرض هذه الرسالة
-         ------------------------------
-		       ***Games Commands***
-		 -يخيرك بين شي وشي / لو خيروك』
-		 -لعبه صراحه/صراحه』
-		 -xo  لعبة اكس او
-		 
-                                                **
-         
-       **  `)
-   message.author.sendEmbed(embed)
+**
+  `
+,`
+        ***__Games orders__***
+**
+-يخيرك بين شي وشي / لو خيروك』
+-لعبه صراحه/صراحه』
+-xo  لعبة اكس او
+**
    
-   }
-   });  
+`]
+    let page = 1;
+ 
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+ 
+    message.author.sendEmbed(embed).then(msg => {
+ 
+        msg.react('◀').then( r => {
+            msg.react('▶')
+ 
+ 
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+ 
+ 
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+ 
+ 
+ 
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+     
+      page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
+    }
+});
+ 
 client.on('message', message => {
      if (message.content === (prefix + "help")) {
 	  message.react("📩")
@@ -952,21 +986,6 @@ client.on('message' , message => {
  message.delete(); 
 };     
 });
-
-client.on("message", (message) => {
-                        if (message.channel.type === "dm") {
-                    if (message.author.id === client.user.id) return;
-                    let yumz = new Discord.RichEmbed()
-                                .setTimestamp()
-                                .setTitle("رسالة مباشرة إلى بوت")
-                                .addField(`أرسلت بواسطة:`, `<@${message.author.id}>`)
-                                .setColor("RANDOM")
-                                .setThumbnail(message.author.displayAvatarURL)
-                                .addField(`رسالة: `, `\n\n\`\`\`${message.content}\`\`\``)
-                                .setFooter(`Anis-hdd ©`)
-                            client.users.get("484326398568300555").send(yumz)
-                        }
-            });
 			
 			const replyForMention = [   "**Hi For More Informations Type ||*-help*||♥**",  ]
 client.on('message', message=> {
