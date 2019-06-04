@@ -5,7 +5,7 @@ var client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Welcome in servr Anis ${client.user.tag}!`);
 });
-var prefix = '-'
+var prefix = '#'
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
@@ -59,7 +59,7 @@ client.on('ready', () => {
 });
 client.on('ready', function(){
     var ms = 100000 ;
-    var setGame = [`[ -help ]`];   
+    var setGame = [`[ #help ]`];   
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -84,41 +84,41 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 -⚠ صيانه كل يوم
 -💵 مجاني بل كامل 
 -📚 البوت عربي و سيتم اضافه اللغه النكليزية
-¤ [TitanMc] ¤
+¤ [Aռɨֆ_ʍǟʟʊʍʏǟτ|ɢǟʍϵrツ  #0976البوت خاص ب] ¤
 **
         ***__General orders__***
 **
--id : 『عرض ملفك الشخصي』
--ask : 『البوت يسئلك اسئلة』
--server : 『معلومات عن السيرفر』
--ping 『لمعرفه سرعه البوت』
--servers 『علشان تشوف البوت بكم سيرفر اون لاين 』
--bot/ معلومات عن البوت』
--avatar/ يعرض صورتك او صوره شخص』
--support/ سيرفر الدعم القني و المساعده』
--roll <number> ➾ role
--draw / يكرر الكلام في صوره』
--calculate / حاسبة』
--say/يكرر الكلام الي تكتبو
--skin name in minecraft لإضهار سكنك في ماين طرافت
+✴#id : 『عرض ملفك الشخصي』
+✴#ask : 『البوت يسئلك اسئلة』
+✴#server : 『معلومات عن السيرفر』
+✴#ping 『لمعرفه سرعه البوت』
+✴#servers 『علشان تشوف البوت بكم سيرفر اون لاين 』
+✴#bot/ معلومات عن البوت』
+✴#avatar/ يعرض صورتك او صوره شخص』
+✴#support/ سيرفر الدعم القني و المساعده』
+✴#roll <number> ➾ role
+✴#draw / يكرر الكلام في صوره』
+✴#calculate / حاسبة』
+✴#say/يكرر الكلام الي تكتبو
+✴#skin name in minecraft لإضهار سكنك في ماين طرافت 
 **
   `
 ,`
         ***__Admin orders__***
 **
--ban : 『لتعطي شخص باند』
--kick : 『لتعطي شخص كيك』
--clear : 『لمسح الشات برقم』
--createroles : 『عمل رتب متكاملة للسيرفر』
--voicesetup : 『انشاء روم فويس اونلاين
+✴#ban : 『لتعطي شخص باند』
+✴#kick : 『لتعطي شخص كيك』
+✴#clear : 『لمسح الشات برقم』
+✴#createroles : 『عمل رتب متكاملة للسيرفر』
+✴#voicesetup : 『انشاء روم فويس اونلاين
 لكتابة الكلام الذي في الروم اكتب voicesetup الكلام و 0 』
--color 50 /انشاء 50 لون』
--mute < mention > ➾ اسكات عضو
--unmute <mention> ➾ فك الاسكات من العضو
--bc  『خيارات البرودكاست』
--ce لمح لشات بعدد
--role @user <rank> / لأعطاء رتبة لعضو معين
--roleremove @user <rank> / لازالة الرتبة من شخص معين
+✴#color 50 /انشاء 50 لون』
+✴#mute < mention > ➾ اسكات عضو
+✴#unmute <mention> ➾ فك الاسكات من العضو
+✴#bc  『خيارات البرودكاست』
+✴#ce لمح لشات بعدد
+✴#role @user <rank> / لأعطاء رتبة لعضو معين
+✴#roleremove @user <rank> / لازالة الرتبة من شخص معين
 ----------------------
          -guilds : عدد سيرفر البوت
          -inv : دعوه البوت الى سيرفر (غير ماتحة)
@@ -128,9 +128,9 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 ,`
         ***__Games orders__***
 **
--يخيرك بين شي وشي / لو خيروك』
--لعبه صراحه/صراحه』
--xo  لعبة اكس او
+✴#يخيرك بين شي وشي / لو خيروك』
+✴#لعبه صراحه/صراحه』
+✴#xo  لعبة اكس او
 **
    
 `]
@@ -187,7 +187,7 @@ client.on('message', message => {
     }
 });
 client.on('message', message => {
-    var prefix = "-"
+    var prefix = "#"
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
@@ -297,7 +297,7 @@ if (message.content.startsWith("kick")) {
     message.channel.send("تم أعطاء كيك الى : " + mention.tag);
 };
 });
-var prefix = "-"
+var prefix = "#"
     client.on('message', message => {
       if (message.author.x5bz) return;
       if (!message.content.startsWith(prefix)) return;
@@ -338,7 +338,7 @@ var prefix = "-"
     });
 
 client.on('message', message => {
-	var prefix = "-";
+	var prefix = "#";
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
@@ -987,7 +987,7 @@ client.on('message' , message => {
 };     
 });
 			
-			const replyForMention = [   "**Hi For More Informations Type ||*-help*||♥**",  ]
+			const replyForMention = [   "**Hi For More Informations Type ||-*#help*-||♥**",  ]
 client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
@@ -997,7 +997,7 @@ client.on('message', message=> {
 });
 
 client.on('message' , message => {
-  var prefix = "-";
+  var prefix = "#";
   if(message.author.bot) return;
  
   if(message.content.startsWith(prefix + "xo")) {
@@ -1061,7 +1061,7 @@ client.on('message' , message => {
 }
  });
  
- var prefix = "-";
+ var prefix = "#";
 
 client.on('message',async message => {
   var room;
@@ -1694,6 +1694,65 @@ client.on('message', message => {
               });
     }
        
+});
+
+client.on('message', async message =>{
+  if (message.author.boss) return;
+	var prefix = "-";
+
+if (!message.content.startsWith(prefix)) return;
+	let command = message.content.split(" ")[0];
+	 command = command.slice(prefix.length);
+	let args = message.content.split(" ").slice(1);
+	if (command == "mute") {
+		if (!message.channel.guild) return;
+		if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply(":x: You Dont Have Perms `MANAGE_MESSAGES`").then(msg => msg.delete(5000));
+		if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("The Bot Haven't Perms `MANAGE_MESSAGES`").then(msg => msg.delete(5000));;
+		let user = message.mentions.users.first();
+		let muteRole = message.guild.roles.find("name", "Muted");
+		if (!muteRole) return message.reply("**You Should Create A Rank Name `Muted`**").then(msg => {msg.delete(5000)});
+		if (message.mentions.users.size < 1) return message.reply('**You Have To Mention SomeOne**').then(msg => {msg.delete(5000)});
+		let reason = message.content.split(" ").slice(2).join(" ");
+		message.guild.member(user).addRole(muteRole);
+		const muteembed = new Discord.RichEmbed()
+		.setColor("RANDOM")
+		.setAuthor(`Muted!`, user.displayAvatarURL)
+		.setThumbnail(user.displayAvatarURL)
+		.addField("**:busts_in_silhouette:  User**",  '**[ ' + `${user.tag}` + ' ]**',true)
+		.addField("**:hammer:  By**", '**[ ' + `${message.author.tag}` + ' ]**',true)
+		.addField("**:book:  Reason**", '**[ ' + `${reason}` + ' ]**',true)
+		.addField("User", user, true)
+		message.channel.send({embed : muteembed});
+		var muteembeddm = new Discord.RichEmbed()
+		.setAuthor(`Muted!`, user.displayAvatarURL)
+		.setDescription(`      
+${user} You Are Muted Because You Broke Rules 
+${message.author.tag} By
+[ ${reason} ] : Reason
+If You Didnt Any Thing GGO To Staff
+`)
+		.setFooter(`Server : ${message.guild.name}`)
+		.setColor("RANDOM")
+	user.send( muteembeddm);
+  }
+if(command === `unmute`) {
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage(":x: You Dont Have Perms `MANAGE_MESSAGES`").then(m => m.delete(5000));
+if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("The Bot Haven't Perms `MANAGE_MESSAGES`").then(msg => msg.delete(6000))
+
+  let toMute = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
+  if(!toMute) return message.channel.sendMessage(":x: You Have To Mention SomeOne ");
+
+  let role = message.guild.roles.find (r => r.name === "Muted");
+  
+  if(!role || !toMute.roles.has(role.id)) return message.channel.sendMessage(":x: This User In Not Muted")
+
+  await toMute.removeRole(role)
+  message.channel.sendMessage(":white_check_mark: Succes Has Been Unmuted The User");
+
+  return;
+
+  }
+
 });
 
 client.login(process.env.BOT_TOKEN)
