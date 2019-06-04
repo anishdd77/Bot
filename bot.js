@@ -120,9 +120,9 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 ✴#role @user <rank> / لأعطاء رتبة لعضو معين
 ✴#roleremove @user <rank> / لازالة الرتبة من شخص معين
 ----------------------
-         -guilds : عدد سيرفر البوت
-         -inv : دعوه البوت الى سيرفر (غير ماتحة)
-         -help : عرض هذه الرسالة
+✴#guilds : عدد سيرفر البوت
+✴#inv : دعوه البوت الى سيرفر (غير ماتحة)
+✴#help : عرض هذه الرسالة
 **
   `
 ,`
