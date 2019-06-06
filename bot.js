@@ -92,16 +92,14 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 ✴#ask : 『البوت يسئلك اسئلة』
 ✴#server : 『معلومات عن السيرفر』
 ✴#ping 『لمعرفه سرعه البوت』
-✴#servers 『علشان تشوف البوت بكم سيرفر اون لاين 』
 ✴#bot/ معلومات عن البوت』
 ✴#avatar/ يعرض صورتك او صوره شخص』
 ✴#support/ سيرفر الدعم القني و المساعده』
-✴#roll <number> ➾ role
 ✴#draw / يكرر الكلام في صوره』
 ✴#calculate / حاسبة』
 ✴#say/يكرر الكلام الي تكتبو
 ✴#skin name in minecraft لإضهار سكنك في ماين طرافت 
-✴${prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل
+✴#roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل
 **
   `
 ,`
@@ -120,9 +118,11 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 ✴#ce لمح لشات بعدد
 ✴#role @user <rank> / لأعطاء رتبة لعضو معين
 ✴#roleremove @user <rank> / لازالة الرتبة من شخص معين
+✴${prefix}hchannel / اخفاء الشات
+✴${prefix}schannel / اضهار الشات المخفية
 ----------------------
 ✴#guilds : عدد سيرفر البوت
-✴#inv : دعوه البوت الى سيرفر (غير ماتحة)
+✴#inv : دعوه البوت الى سيرفر 
 ✴#help : عرض هذه الرسالة
 **
   `
@@ -257,39 +257,9 @@ client.on('message', function(msg) {
       msg.channel.send({embed:embed});
     }
 });
-
-console.log("Welcome Again !");
-
-client.on('ready', () => {
-    client.user.setStatus('idle');
-});
-
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`**
-      حياك الله ي بعد راسي
-       خش بتنورنا فعاليات وكل شيء حلو موجود !
-        ي بعد عيني الرابط تحت
-         Spring SERVER
-
-                                 [ https://discord.gg/Yt7NYZ ] **`)
-}).catch(console.error)
-})
-
-client.on("guildMemberRemove", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`**
-      حياك الله ي بعد راسي
-       خش بتنورنا فعاليات وكل شيء حلو موجود !
-        ي بعد عيني الرابط تحت
-         Spring SERVER
-
-                                 [ https://discord.gg/Yt7NYZ ] **`)
-}).catch(console.error)
-})
  
 client.on('message', message => {
-    if (message.content.startsWith("-avatar")) {
+    if (message.content.startsWith("#avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -456,8 +426,8 @@ if (message.content.startsWith(prefix+"cv")) {
 });
 client.on('message', message => {
   if (true) {
-if (message.content === '-inv') {
-      message.author.send('اسف غير متاحة ').catch(e => console.log(e.stack));
+if (message.content === '#inv') {
+      message.author.send('https://discordapp.com/api/oauth2/authorize?client_id=580829741498630192&permissions=8&scope=bot ').catch(e => console.log(e.stack));
 
     }
    } 
@@ -469,7 +439,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" اسف هذا الأمر غير متاح او ممنوع")
+  .addField("تم الإرسال في الخاص")
      
      
      
@@ -478,7 +448,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content == "-ask") {
+    if (message.content == "#ask") {
          message.react('🤔','👌')
         var x = ['اين يلعب مصطفي فتحي؟', 'ما هو اسم ملعب بارشالونة', 'ما هو يوم الحج الأكبر؟', 'ما هو أطول أنهار أوربا ؟', 'ما هو اسم بيت الدجاج', 'ما هو أول بنك قام بالنشاط المصرفي في السعودية عام 1926م' , 'ما هو أول جامع أقيم في مصر','ما هو أطول نهر في آسيا','ما هو أقرب كوكب إلى الشمس','ما هو الحيوان الذي يُسمى البهنس','ما هو اول مسجد أسس بالمدينة','متى وقع صلح الحديبية عام 6هـ او 3هـ او 2هـ؟','متى قامت أمريكا بأول رحلة فضائية','متى كانت غزوة خيبر؟','ما هي السورة التي تبدأ بقوله تعالى " يا أيها النبي اتق الله ولا تطع الكافرين والمنافقين إن الله كان عليما حكيما ".اجب؟','ما هي السورة التي يطلق عليها عروس القرآن','ماذا يسمى من لايقرأ ولايكتب','ماهي أول دولة استخدمت طابع البريد','ماهو شعار الولايات المتحدة الامريكية','ماهو اذكي الحيوانات','من هو مكتشف أمريكا','مامعنى "فرعون" اجب؟','ماهو اقرب كوكب إلى الارض','ما هي نسبه المياه من الكره الارضيه?','كم عدد السجدات في القرآن الكريم؟','من هو بطل كاس العالم في عام 1966','أين أفتتح اول متحف في العالم?','ماأسم أنثى الحمار?','كم تبلغ درجه حراره الشمس؟','من هي مدينة الضباب','أين توجد أطول سكة حديد في العالم?'
         ];
@@ -523,7 +493,7 @@ client.on('message',function(message) {
    } 
 });
 client.on('message', message => {
-    if (message.content === "-createroles") {
+    if (message.content === "#createroles") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_ROLES`` **Premission**`);
 
@@ -658,7 +628,7 @@ client.on('guildMemberRemove', member => {
     channel.send({embed : embed});
     })
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","☠ᶆéᶆ฿éɹ☠⚓")); //اسم الرتبة
+    member.addRole(member.guild.roles.find("name","✨щéļḉσᶆé✨")); //اسم الرتبة
     });
 	
 
@@ -718,7 +688,7 @@ client.on('message' , async (message) => {
 
 client.on('message', message => {
                                 if(!message.channel.guild) return;
-                        if (message.content.startsWith('-ping')) {
+                        if (message.content.startsWith('#ping')) {
                             if(!message.channel.guild) return;
                             var msg = `${Date.now() - message.createdTimestamp}`
                             var api = `${Math.round(client.ping)}`
@@ -734,7 +704,7 @@ client.on('message', message => {
                     });
 					
 					client.on('message', message => {
-     if (message.content === "-servers") {
+     if (message.content === "#servers") {
      let embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField("**| السيرفرات |**" , client.guilds.size)
@@ -1193,7 +1163,7 @@ client.on("message", message => {
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
         let channel = message.guild.channels.find("name", "التقديمات")
-            if(!channel) return message.reply("**لانشاء روم التقديمات -room1 من فضلك اكتب الامر**")
+            if(!channel) return message.reply("**لانشاء روم التقديمات #room1 من فضلك اكتب الامر**")
             if(channel) {
             message.channel.send( message.member + ', **:timer:**').then( (m) =>{
               m.edit( message.member + ', **اسمك الحقيقى  ✍**' )
@@ -1284,9 +1254,9 @@ client.on("message", message => {
   let mention = message.mentions.members.first();
   let role = message.content.split(" ").slice(2).join(" ");
   let mySupport = message.guild.roles.find('name',role);
-  if(message.content.startsWith("-قبول")) {
+  if(message.content.startsWith("#قبول")) {
     let acRoom = message.guild.channels.find('name', 'القبول-الرفض');
-    if(!acRoom) return message.reply("-room2 من فضلك انشاء روم **القبول-الرفض** او اكتب الامر");
+    if(!acRoom) return message.reply("#room2 من فضلك انشاء روم **القبول-الرفض** او اكتب الامر");
     if(acRoom) {
     if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return;
     if(!mention) return message.reply('منشن شخص');
@@ -1302,10 +1272,10 @@ client.on("message", message => {
 });
 client.on('message',async message => {
   let mention = message.mentions.members.first();
-  if(message.content.startsWith("-رفض")) {
+  if(message.content.startsWith("#رفض")) {
   if(!message.channel.guild) return;
   let acRoom = message.guild.channels.find('name', 'القبول-الرفض');
-  if(!acRoom) return message.reply("-room2 من فضلك انشاء روم **القبول-الرفض** او اكتب الامر");
+  if(!acRoom) return message.reply("#room2 من فضلك انشاء روم **القبول-الرفض** او اكتب الامر");
   if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return;
   if(!mention) return message.reply("منشن شخص");
  
@@ -1313,7 +1283,7 @@ client.on('message',async message => {
   }
 });
           client.on('message', message=>{
-            if(message.content.startsWith("-room2")) {
+            if(message.content.startsWith("#room2")) {
          if(!message.channel.guild) return;
                 if(message.author.bot) return;
                 if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
@@ -1363,10 +1333,10 @@ if(!message.channel.guild) return message.channel.send('**هذا الأمر فق
 client.on('guildMemberAdd', member => {
     var embed = new Discord.RichEmbed()
     .setThumbnail(member.user.avatarURL)
-  .addField("*** شكرا الانضمامك الـنـا حبيبي ***" ,member.user.username )
+  .addField("*** شكرا الانضمامك إلـينـا حبيبي ***" ,member.user.username )
     .setDescription('**# ``-`` __W__elcome __T__ø server 🥂**')// كلام ترحيب بعضو
     .setColor('RANDOM')
-    .setImage('https://2.top4top.net/p_1225y7yza1.gif')// صور ترحيب
+    .setImage('http://www.animatedimages.org/data/media/707/animated-welcome-image-0291.gif')// صور ترحيب
 var channel =member.guild.channels.find('name', '✨щéļḉσᶆé✨')// اسم شات ترحيب
 if (!channel) return;
 channel.send({embed : embed});
@@ -1406,7 +1376,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+        
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1424,7 +1394,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+         
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1442,7 +1412,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+          
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1461,7 +1431,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+          
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1480,7 +1450,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+        
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1498,7 +1468,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+          
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1516,7 +1486,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+          
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1534,7 +1504,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+      
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1544,14 +1514,14 @@ client.on('message', message => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('fu*')){
+    if(message.content.includes('fu')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "لا تسب",
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc"
+          
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1568,7 +1538,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+        
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1587,7 +1557,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+         
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1606,13 +1576,30 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By TitanMc."
+         
         }
       }}).then(msg => {msg.delete(4000)});
                           }
 
      
-});		 
+});		
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('وتف')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تسب",
+        color: 0x06DF00,
+        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
+        footer: {
+          
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+});  
 
 client.on('message', message => {
     var prefix = "#";
@@ -1788,5 +1775,78 @@ client.on('message', async message => {
        
     }
 })
+
+var AsciiTable = require('ascii-data-table').default
+client.on('message', message =>{
+
+    if(message.content.startsWith(prefix + "roles")){
+        ros=message.guild.roles.size,
+        data = [['Rank', 'RoleName']]
+        for(let i =0;i<ros;i++){
+            if(message.guild.roles.array()[i].id !== message.guild.id){
+         data.push([i,`${message.guild.roles.filter(r => r.position == ros-i).map(r=>r.name)}`])
+        }}
+        let res = AsciiTable.table(data)
+
+        message.channel.send(`**\`\`\`xl\n${res}\`\`\`**`);
+    }
+});
+
+client.on('message', message => { 
+    if (message.author.boss) return;
+    if (!message.content.startsWith(prefix)) return;
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+    if (command == "role") {
+    if (!message.channel.guild) return;
+    if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.reply("**:no_entry_sign:انت لا تملك صلاحيات **").then(msg => msg.delete(5000));;
+    if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
+    let user = message.mentions.users.first();
+    if (message.mentions.users.size < 1) return message.reply('**ضع منشن الشخص!!**').then(msg => {msg.delete(5000)});
+    let MRole = message.content.split(" ").slice(2).join(" ");
+    if(!MRole)return message.reply("يجب عليك وضع اسم الرتبة").then(msg => {msg.delete(5000)});
+    message.guild.member(user).addRole(message.guild.roles.find("name", MRole));
+    message.reply('** Done ? **').then(msg => {msg.delete(10000)});
+    }
+    });
+    client.on('message', message => { 
+    if (message.author.boss) return;
+    if (!message.content.startsWith(prefix)) return;
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+    if (command == "roleremove") {
+    if (!message.channel.guild) return;
+    if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.reply("**:no_entry_sign:انت لا تملك صلاحيات **").then(msg => msg.delete(5000));;
+    if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
+    let user = message.mentions.users.first();
+    if (message.mentions.users.size < 1) return message.reply('**ضع منشن الشخص!!**').then(msg => {msg.delete(5000)});
+    let MRole = message.content.split(" ").slice(2).join(" ");
+    if(!MRole)return message.reply("يجب عليك وضع اسم الرتبة").then(msg => {msg.delete(5000)});
+    message.guild.member(user).removeRole(message.guild.roles.find("name", MRole));
+    message.reply('** Done ? **').then(msg => {msg.delete(10000)});
+    }
+    });
+	
+	client.on('message', message => {
+      if(message.content === prefix + "hchannel") {
+      if(!message.channel.guild) return;
+      if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
+             message.channel.overwritePermissions(message.guild.id, {
+             READ_MESSAGES: false
+ })
+              message.channel.send('Channel Hided Successfully ! :white_check_mark:  ')
+ }
+});
+
+client.on('message', message => {
+      if(message.content === prefix + "schannel") {
+      if(!message.channel.guild) return;
+      if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':x:');
+             message.channel.overwritePermissions(message.guild.id, {
+             READ_MESSAGES: true
+ })
+              message.channel.send('Done  ')
+ }
+});
 
 client.login(process.env.BOT_TOKEN)
