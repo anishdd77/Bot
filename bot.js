@@ -435,7 +435,7 @@ if (message.content === '#inv') {
 
 
 client.on('message', message => {
-     if (message.content === "-inv") {
+     if (message.content === "#inv") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
