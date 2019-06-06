@@ -912,6 +912,7 @@ const Sra7a = [
 
 client.on('message', msg => { if (msg.content === 'هلا') { msg.reply('**هــلا والله  **'); } });
 client.on('message', msg => { if (msg.content === 'خروف') { msg.reply('**الله يهديك يا خروف*'); } });
+client.on('message', msg => { if (msg.content === 'ip') { msg.reply('**TitenMc.fmcs.cf **'); } });
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
