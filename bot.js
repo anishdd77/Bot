@@ -11,7 +11,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "460389855382470662") return;
+  if (message.author.id !== "580829741498630192") return;
 
   
   if (message.content.startsWith(prefix + 'setwatch')) {
@@ -912,7 +912,6 @@ const Sra7a = [
 
 client.on('message', msg => { if (msg.content === 'هلا') { msg.reply('**هــلا والله  **'); } });
 client.on('message', msg => { if (msg.content === 'خروف') { msg.reply('**الله يهديك يا خروف*'); } });
-client.on('message', msg => { if (msg.content === 'ip') { msg.reply('**TitenMc.fmcs.cf **'); } });
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
