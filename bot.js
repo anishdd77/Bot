@@ -637,7 +637,7 @@ client.on('guildMemberRemove', member => {
         .setColor('RED')
         .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
-    var channel =member.guild.channels.find('name', '✨щéļḉσᶆé✨')
+    var channel =member.guild.channels.find('name', 'welcome')
     if (!channel) return;
     channel.send({embed : embed});
     })
@@ -2267,14 +2267,14 @@ __
 }); 
 
 client.on('message', message => {
-	var prefix = "#";
 if (message.content.startsWith(prefix + 'tag')) {
     let args = message.content.split(" ").slice(1);
-if(!args[0]) return message.reply('Write Some Things');  
+if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
 
     figlet(args.join(" "), (err, data) => {
               message.channel.send("```" + data + "```")
            })
+
 }
 });
 
