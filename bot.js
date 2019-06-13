@@ -74,6 +74,7 @@ client.on('ready', function(){
     }, ms);100000
 
 });
+
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
     let pages = [`
@@ -84,8 +85,9 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 -⚠ صيانه كل يوم
 -💵 مجاني بل كامل 
 -📚 البوت عربي و سيتم اضافه اللغه النكليزية
-¤ [Aռɨֆ_ʍǟʟʊʍʏǟτ|ɢǟʍϵrツ  #0976البوت خاص ب] ¤
+¤ ✺☵⚌⚌⚌⚌⚌☵⚀ANIS_HDD⚀☵⚌⚌⚌⚌⚌☵✺¤
 **
+     ▛═════════『ِ «Anis_hdd» 』ِ═════════▜
         ***__General orders__***
 **
 ✴#id > 『عرض ملفك الشخصي』
@@ -100,7 +102,7 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 ✴#roles>يعرض لك كل الرانكات بالسيرفر بشكل جميل
 ✴#members >معلومات عن الاعضاء
 ✴${prefix}pic >يكتب اي اسم في صورة
-✴${prefix} #buy>لشراء رتبة هلبر اكتب 
+✴${prefix}buy>لشراء رتبة هلبر اكتب 
 ✴${prefix}report >للإبلاغ عن شيئ
 ✴${prefix}topinv > لعرض صاحب اكثر دعوات
 ✴${prefix}tag > لعرض الكلام بشكل جميل و كبير 
@@ -140,13 +142,13 @@ if (message.content.startsWith(prefix + 'help')) { //Anis_hdd - [ ANIS_Malumuat]
 ✴#يخيرك بين شي وشي / لو خيروك』
 ✴#لعبه صراحه/صراحه』
 ✴#xo لعبة اكس او
-✴#تلعب   معاه مريم 
 ✴#يعطيك عقابات لازم تسويها : عقاب 
 ✴#ask : 『البوت يسئلك اسئلة』
 ✴#فكك
 
  [welcome]يتم الترحيب عبر روم اسمه
 **
+  ═════════『ِAnis_hdd』ِ═════════
    
 `]
     let page = 1;
@@ -552,7 +554,7 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   }
 });
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', '✨щéļḉσᶆé✨');
+     const welcomer =  member.guild.channels.find('name', 'welcome');
     if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -594,7 +596,7 @@ const w = ['./img/w1.png'];
                         ctx.fontSize = '20px';
                         ctx.fillStyle = "#f1f1f1";
                         ctx.textAlign = "center";
-                        ctx.fillText(`welcome to ${member.guild.name}`, 300, 130);
+                        ctx.fillText(`welcome to server`, 300, 130);
                         
                         ctx.font = "bold 12px Arial";
                         ctx.fontSize = '20px';
@@ -642,7 +644,7 @@ client.on('guildMemberRemove', member => {
     channel.send({embed : embed});
     })
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","✨щéļḉσᶆé✨")); //اسم الرتبة
+    member.addRole(member.guild.roles.find("name","welcome")); //اسم الرتبة
     });
 	
 
@@ -1751,69 +1753,6 @@ client.on('message', message => {
  }
 });
 
-console.log('mariam ra7t tmot al nas');
-client.on('ready', () => {
-  console.log(`im redey`);
-});
-const zead = [
-   '*** انا اسمي مريم ***',
-   '*** مرحباَ ماهو اسمك ؟ ***',
-   `*** اهلا بك ! انا تائهه في هذا المكان  ***`,
-   '*** هل تود مساعدتي ؟ ***',
-   '*** لماذا هل انت قاسي القلب ؟ ***',
-   '*** انني اشفق عليك عليك يجب ان تطهر روحك وتحب الخير للجميع ***',
-   '*** ابتعد عني قليل انني متعبة ***',
-   '*** هل انت نادم على ماقلت ؟ ***',
-   '*** ابتعد عني قليل انني متعبة ***',
-   '*** هل انت نادم على ماقلت ؟ ***',
-   '*** هل تود مساعدتي ؟ ***',
-   '*** واو اشكرك انك شخصاَ رائع ! ***',
-   '*** ابحث معي عن منزلي لقد كان قريباَ من هنا ***',
-   '*** ولاكن عندما حل الليل لم اعد ارى اي شيء ***',
-   '*** مذا تظن اين يوجد ؟ يمين او يسار ***',
-   '*** هيا اذاَ ***',
-   '*** اود ان اسئلك سؤال ونحن في الطريق ***',
-   '*** هل تراني فتاة لطيفة ام مخيفة ***',
-   '*** اشكرك !  ***',
-   '*** لقد وصلنا الى المنزل شكراَ جزيلَ انتطرني ثواني وسوف اعود ***',
-   '*** هل انت جاهز ؟ ***',
-   '*** لقد اخبرت والدي عنك وهم متحمسين لرؤيتك ***',
-   '*** هل تود ان تراهم الان ***',
-'*** انا لست الحوت الازرق كما يدعون ***',
-   '*** انا لست كاذبة صدقني***',
-   '*** لماذا ارى في عينيك الخوف ؟ ***',
-   '*** انا مجرد فتاة لطيفة تحب اللعب مع الجميع ***',
-   '*** اعرف كل شيء يحدث اسمع ذالك بالراديو ***',
-   '*** سمعت ان البشر يقتلون من اجل المال فقط ***',
-   '*** لماذا لم تدخل الغرفة ؟ ***',
-   '*** ههههههههههههههههههه انت الان مسجون في هذه الغرفة ***',
-   '*** لن تخرج حتى اعود لك بعد قليل ***',
-   '*** المفتاح معك ! اكتب .مريم  ***',
-   '*** مفتاح احمر , هل حصلت عليه ؟ ***',
-   '*** ان لم تحصل عليه , اكتب .مريم مرة اخرى ***',
-   '*** مفتاح اسود . هل حصلت عليه ؟ ***',
-   '*** اين تريد ان تختبئ بسرعة قبل ان تعود ***',
-   '*** لقد عادت من جديد الى المنزل ***',
-   '*** لا تصدر اي صوت ! ***',
-   '*** مريم : لقد عدت ***',
-   '*** مريم : يا ايها المخادع اين انت ***',
-   '*** مريم : اعلم انك هنا في المنزل ***',
-   '*** مريم : ماذا تريد ان تسمع ***',
-   '*** مريم : اضغط على الرابط اهداء مني لك | https://www.youtube.com/watch?v=hvSiuQccmtg ***',
-   '*** احد ما خرج من المنزل ***',
-   '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدنا في نشر البوت وادخل هذا السيرفر  ***'
-]
- client.on('message', message => {
- if (message.content.startsWith('#مريم')) {
-  var mariam= new Discord.RichEmbed()
-  .setTitle("لعبة مريم ..")
-  .setColor('RANDOM')
-  .setDescription(`${zead[Math.floor(Math.random() * zead.length)]}`)
-  .setImage("https://www.npa-ar.com/wp-content/uploads/2017/08/%D9%84%D8%B9%D8%A8%D8%A9-%D9%85%D8%B1%D9%8A%D9%85-300x200.jpg")
-   message.channel.sendEmbed(mariam);
-   message.react("??")
-  }
-});
 
   client.on('message', message => {
               if (!message.channel.guild) return;
@@ -2031,29 +1970,6 @@ reaction2.on("collect", r => {
 }
 });
 
-client.on("message", (message) => {
-let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-if (command == "ct") {
-            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
-        let args = message.content.split(" ").slice(1);
-    message.guild.createChannel(args.join(' '), 'text');
-message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
-
-}
-});
-
-client.on("message", (message) => {
-     let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-if (command == "cv") {
-            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
-        let args = message.content.split(" ").slice(1);
-    message.guild.createChannel(args.join(' '), 'voice');
-message.channel.sendMessage('تم انشاء روم صوتى')
-}
-});
-
 client.on('message',async message => {
   var room;
   var title;
@@ -2163,50 +2079,55 @@ __
       }
 }); 
 
-client.on('message', message => {
-    if (message.content == "#فكك") {
-        var x = ["محمد",
-"مدرسة",
-"بيت",
-"الله",
-"بيت مقدس",
-"مهندس",
-"ريضيات",
-"بسم الله رحمن رحيم",
-"طماطم",
-"سيرفر",
-];
-        var x2 = ['م ح م ح',
-        "م د ر س ة",
-        "ب ي ت ",
-        "ا ل ل ه",
-"ب ي ت م ق د س",
-"م ه ن د س",
-"ر ي ض ي ا ت",
-"ب س م ا ل ل ه ر ح م ن ر ح ي م",
-"ط م ا ط م",
-"س ي ر ف ر",
-     ];
-        
-        var x3 = Math.floor(Math.random()*x.length)
-        message.channel.send(`  فكك
- :  __**${x[x3]}**__
-لديك 20 ثانية`).then(msg1=> {
-            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
-                maxMatches : 1,
-                time : 20000,
-                errors : ['time']
-            })
-        r.catch(() => {
-            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
-            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
-        })
-        
-        r.then((collected)=> {
-            message.channel.send(`${collected.first().author}لقد قمت بتفكيك كلمة في وقت مناسب`);
-        })
-        })
-    }
-})
+client.on('message', message => {//new msg event
+                if(!message.channel.guild) return;
+                  if(message.content.startsWith(prefix + 'setR')) {//to create the rainbow role
+                      let role = message.guild.roles.find('name', 'rainbow.')
+                    if(role) return message.channel.send(`This Step Already Completed !`)//if the role already created return with this msg
+                  //start of create role 
+                  if(!role){
+                    rainbow =  message.guild.createRole({
+                   name: "rainbow.",//the role will create name
+                   color: "#000000",//the default color
+                   permissions:[]//the permissions
+                 //end of create role
+                })
 
+                }
+                message.channel.send('Done The Rainbow Role Setup Has Been Completed')//if the step completed
+                }})
+
+                client.on('ready', () => {//new ready event
+                  setInterval(function(){
+                      client.guilds.forEach(g => {
+                                  var role = g.roles.find('name', 'rainbow.');//rainbow role name
+                                  if (role) {
+                                      role.edit({color : "RANDOM"});
+                                  };
+                      });
+                  }, 3000);//the rainbow time
+                })
+				
+				client.on('message', msg => {
+ if (msg.content.startsWith(prefix + 'cal')) {
+    let args = msg.content.split(" ").slice(1);
+        const question = args.join(' ');
+    if (args.length < 1) {
+        msg.reply('** حــدأد عــداد رجــاء مــنــك **');
+} else {    let answer;
+    try {
+        answer = math.eval(question);
+    } catch (err) {
+        msg.reply(`** دخـل رقـم فـقـط **: ${err} :x:`);
+    }
+    
+    const embed = new Discord.RichEmbed()
+    .addField("**إدخال**:",`**${question}**`, true)
+    .addField("**انتاج**:",`**${answer}**`, true)
+    msg.channel.send(embed)  .catch(console.error);
+
+    }
+};
+});
+				
 client.login(process.env.BOT_TOKEN)
