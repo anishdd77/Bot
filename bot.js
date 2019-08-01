@@ -264,4 +264,4 @@ member.guild.fetchInvites().then(guildInvites => {
 
       }
       });
-client.login('');
+client.login('NTgwODI5NzQxNDk4NjMwMTky.XUMG4w.mu6aE-dL-pdTopR5u3RkpR4p-7A');
